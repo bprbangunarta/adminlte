@@ -4,8 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login - {{ env('APP_NAME') }}</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Meta dasar -->
+    <title>Login - {{ env('APP_NAME') }}</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}" />
+    <meta name="description" content="CODEX adalah platform integrasi data inti untuk monitoring, analisis, dan pertukaran data nasabah BPR Bangunarta." />
+    <meta name="author" content="Jendela Kreasi Visual" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="CODEX (Core Data Exchange)" />
+    <meta property="og:description" content="CODEX adalah platform integrasi data inti untuk monitoring, analisis, dan pertukaran data nasabah BPR Bangunarta." />
+    <meta property="og:image" content="{{ asset('assets/images/codex.webp') }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CODEX (Core Data Exchange)" />
+    <meta name="twitter:description" content="CODEX adalah platform integrasi data inti untuk monitoring, analisis, dan pertukaran data nasabah BPR Bangunarta." />
+    <meta name="twitter:image" content="{{ asset('assets/images/codex.webp') }}" />
 
     <link rel="stylesheet" href="{{ asset('components/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('components/font-awesome/css/font-awesome.min.css') }}">
@@ -42,7 +62,7 @@
     <div class="login-box">
         <div class="login-logo">
             <a href="/login">
-                <img src="{{ asset('logo_full.png') }}" class="img-responsive" alt="logo">
+                <img src="{{ asset('assets/images/logo_full.png') }}" class="img-responsive" alt="logo">
             </a>
         </div>
 
