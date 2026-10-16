@@ -1,0 +1,28 @@
+# Dependensi, hasil build, dan file yang di-generate
+/vendor
+/node_modules
+/storage
+/bootstrap/cache
+/public/build
+/public/hot
+package-lock.json
+composer.lock
+
+# Assets pihak ketiga (AdminLTE dan plugin), jangan diformat
+/public/bower_components
+/public/dist
+/public/plugins
+
+# PHP diformat oleh Pint, Blade tidak didukung Prettier
+*.php
+
+# Dikelola Laravel Boost / Claude Code
+CLAUDE.md
+AGENTS.md
+/.claude
+/.ai
+
+# File yang ditulis ulang oleh Composer / Boost
+composer.json
+boost.json
+.mcp.json
