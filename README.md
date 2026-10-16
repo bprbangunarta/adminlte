@@ -1,3 +1,13 @@
+## Konfigurasi `.mcp.json` (Laravel Boost)
+
+File `.mcp.json` menjalankan server MCP Laravel Boost untuk Claude Code. Isinya **khusus perangkat**: saat ini memakai `wsl.exe`, `/usr/bin/php8.3`, dan path `/home/zulfame/projects/adminlte/artisan`. Sesuaikan dengan perangkat Anda (path proyek, lokasi PHP, WSL atau bukan), atau buat ulang dengan:
+
+```sh
+php artisan boost:install
+```
+
+Aplikasi berjalan normal tanpa file ini; hanya tool Boost di Claude Code yang bergantung padanya. Jangan commit perubahan yang hanya berlaku di perangkat Anda.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

@@ -34,7 +34,7 @@ Template admin panel berbasis Laravel 13 (PHP 8.3) dengan AdminLTE 2.4.18 (Boots
 
 ## Catatan lingkungan
 
-- Dikembangkan di WSL; `.mcp.json` memakai path absolut dan `wsl.exe`, jadi hanya cocok di mesin ini.
+- `.mcp.json` (server MCP Laravel Boost) sengaja ikut di git, tetapi isinya khusus perangkat pembuatnya: memakai `wsl.exe` dan path absolut `/home/zulfame/projects/adminlte/artisan`. Setiap pengembang WAJIB menyesuaikannya dengan perangkat sendiri (path proyek, versi PHP, WSL/bukan) atau membuat ulang dengan `php artisan boost:install`. Jangan commit perubahan `.mcp.json` yang hanya berlaku di satu perangkat. JSON tidak mendukung komentar, jadi catatan ini ada di sini dan di README.
 - `welcome.blade.php` bawaan tidak dipakai (dashboard ada di `dashboard.blade.php`).
 
 <laravel-boost-guidelines>
