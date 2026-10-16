@@ -1,3 +1,42 @@
+# Proyek AdminLTE Laravel
+
+Template admin panel berbasis Laravel 13 (PHP 8.3) dengan AdminLTE 2.4.18 (Bootstrap 3, jQuery, Font Awesome 4). Repo: https://github.com/bprbangunarta/adminlte (branch `main`).
+
+## Bahasa
+
+- Balas pengguna dalam Bahasa Indonesia. Teks antarmuka (label, pesan, placeholder) juga Bahasa Indonesia.
+- Nama class, method, variabel, dan route tetap Bahasa Inggris.
+
+## Stack UI
+
+- UI memakai AdminLTE 2 + Bootstrap 3, BUKAN Tailwind. Jangan pakai class Tailwind di view dan jangan aktifkan skill `tailwindcss-development` untuk halaman admin. Vite/Tailwind (`resources/css`, `resources/js`) tidak dipakai layout admin.
+- Assets sudah ada di `public/` (`bower_components`, `dist`, `plugins`, `build`). Jangan edit atau hapus isinya. Panggil lewat `asset('...')`.
+- Cek dokumentasi class AdminLTE di `public/dist/css/AdminLTE.css`, bukan mengarang class. Ikon: Font Awesome 4 (`fa fa-*`) dan Ionicons.
+
+## Struktur view
+
+- Halaman admin: `@extends('layouts.app')` dengan section `title`, `page_title`, `page_subtitle`, `breadcrumb`, `content`.
+- Halaman tanpa sidebar (login, dll.): `@extends('layouts.auth')`.
+- Bagian layout ada di `resources/views/layouts/partials/` (styles, scripts, navbar, sidebar, menu-item, footer, alerts). Ubah di sana, jangan duplikasi ke tiap halaman.
+- CSS/JS tambahan per halaman lewat `@push('styles')` dan `@push('scripts')`. Plugin berat (DataTables, Select2, dll.) dimuat hanya di halaman yang butuh.
+- Menu sidebar, skin, dan logo diatur di `config/adminlte.php`. Menu baru ditambahkan di sana, bukan di Blade.
+- Halaman baru: tambahkan route bernama di `routes/web.php`, controller via `php artisan make:controller`, view di `resources/views/`, lalu daftarkan di menu config.
+
+## Pengujian dan format
+
+- Setiap halaman/route baru wajib punya feature test (lihat `tests/Feature/AdminLteTemplateTest.php`).
+- Folder ini adalah repo git, jadi `vendor/bin/pint --dirty --format agent` bisa dipakai.
+
+## Git
+
+- Commit dan push hanya saat diminta. Jangan commit `.env`, `vendor`, atau `node_modules`.
+- Pesan commit dalam Bahasa Indonesia, ringkas, bentuk perintah.
+
+## Catatan lingkungan
+
+- Dikembangkan di WSL; `.mcp.json` memakai path absolut dan `wsl.exe`, jadi hanya cocok di mesin ini.
+- `welcome.blade.php` bawaan tidak dipakai (dashboard ada di `dashboard.blade.php`).
+
 <laravel-boost-guidelines>
 === foundation rules ===
 
